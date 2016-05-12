@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.subwayinfo.MainActivity"
+    tools:ignore="MergeRootFrame">
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <!--  역명 조회 -->
+    <AutoCompleteTextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:id="@+id/txtViewStationName"
+        android:hint="역명을 입력하시오"
+        android:maxLines="1"/>
+    <!-- 검색버튼 -->
+    <Button android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btnSearch"
+        android:text="검색"/>
+    <!-- 호선버튼 -->
+    <Button 
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btnline"
+        android:text="호선"/>
+    "
+</LinearLayout>
+<!-- 역 리스트뷰 -->
+<ListView
+    android:id="@+id/list"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:transcriptMode="normal"
+    />
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:id="@+id/emtpy"
+    android:layout_weight="1"
+    android:text="최근 검색목록 없음"/>
+</FrameLayout>
